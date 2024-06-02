@@ -16,7 +16,7 @@ def main():
     elif not args.inode and args.human:
         executer = my_executer.ExecuterHuman()
     else:
-        executer = my_executer.Executer()
+        executer = my_executer.ExecuterSimple()
     executer.execute()
     executer.print_result()
 
