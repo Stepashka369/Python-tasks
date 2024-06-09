@@ -15,7 +15,7 @@ def parse():
     parser.add_argument('subcommand', choices=['ssh', 'scp'])
     # аргументы в зависимости от подкоманды
     parser.add_argument('args', nargs=argparse.REMAINDER)
-
+    
     return parser.parse_args()
 
 
@@ -27,14 +27,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-# process = Popen(parsed.args, stdout=PIPE, stderr=PIPE)
-# stdout, stderr = process.communicate()
-# returncode = process.returncode
-# stdout = stdout.decode()
-# stderr = stderr.decode()
-
-# print(f'\nreturncode: {returncode}\nstdout: {stdout}\nstderr: {stderr}')
-# print(f'file: {args.file}, password: {args.password}, command: {args.command}, command_args: {args.args}')
-        
